@@ -1,0 +1,26 @@
+//SPDX-License-Identifier: GPL-3.5;
+
+pragma >=0.5.0 < 0.9.0
+
+
+contract cryptoIco is Crypto {
+address public admin;
+address public depositAddress;
+uint public tokenPrice = 0.001 ether; // 1000 token is 1 ether
+uint public hardCap = 300 ether;
+uint public raisedAmount;
+uint public saleStart = block.timestamp;
+uint public saleEnd = block.timestamp + 6400454; // number of seconds after start
+uint public tokenTradeStart = saleEnd + 6400345;// trading start after a week
+uint public maximumInvestment = 5 ether;
+uint public minimumInvestment = 0.1 ether;
+
+enum State{beforeStart, running, afterEnd, halted}
+State public icoState;
+
+
+
+
+
+}
+ 
